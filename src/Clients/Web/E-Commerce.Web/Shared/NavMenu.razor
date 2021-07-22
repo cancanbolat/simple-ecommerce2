@@ -1,0 +1,28 @@
+﻿<Layout Class="layout">
+    <Header>
+        <div class="logo" />
+        <Menu Theme="MenuTheme.Dark" Mode="MenuMode.Horizontal" DefaultSelectedKeys=@(new[]{"1"})>
+            <MenuItem Key="1" RouterLink="/products">Products</MenuItem>
+            <MenuItem Key="2" RouterLink="/cartitems">Cart</MenuItem>
+            <MenuItem>
+                <LoginDisplay />
+            </MenuItem>
+        </Menu>
+    </Header>
+</Layout>
+
+<style>
+    .site-layout-content {
+        background: #fff;
+        padding: 24px;
+        min-height: 280px;
+    }
+
+    #components-layout-demo-top .logo {
+        width: 120px;
+        height: 31px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 16px 24px 16px 0;
+        float: left;
+    }
+</style>

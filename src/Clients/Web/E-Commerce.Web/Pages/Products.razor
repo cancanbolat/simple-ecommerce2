@@ -1,0 +1,28 @@
+﻿@page "/products"
+@inject HttpClient HttpClient
+@attribute [Authorize]
+
+<div class="d-flex flex-wrap mt-4">
+    @foreach (var p in ProductList)
+    {
+        <div class="mb-3 mr-3 ml-3 mt-1">
+            <Card Hoverable Style="width: 240px">
+                <Image Width="200" Src="@p.Image" />
+                <br /><br />
+                <a href="/detail/@p.Slug">
+                    <CardMeta Title="@p.Title" Description="@p.Price.ToString()" />
+                </a>
+            </Card>
+        </div>
+    }
+</div>
+
+@code {
+    protected List<ProductDto> ProductList = new List<ProductDto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await HttpClient.GetFromJsonAsync<ServiceResponse<List<ProductDto>>>("api/v1/product/getproductdetails");
+        ProductList = response.Value;
+    }
+}

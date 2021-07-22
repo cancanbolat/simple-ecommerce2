@@ -1,0 +1,34 @@
+﻿@page "/detail/{slug}"
+@inherits ProductDetailProcess
+@attribute [Authorize]
+
+
+<PageHeader Class="site-page-header" Title="@product.Title" OnBack="@(()=> { NavigationManager.NavigateTo("products"); })" />
+<br />
+
+<Descriptions Layout="@DescriptionsLayout.Horizontal">
+    <DescriptionsItem>
+        <Image Width="250" Src="@product.Image" />
+    </DescriptionsItem>
+    <DescriptionsItem >
+        <p>@product.Description</p>
+        @if (product.Prices != null && product.Prices.Count() > 1)
+        {
+            <div class="form-group">
+                <select class="form-control" @bind="editionId">
+                    @foreach (var item in product.Prices)
+                    {
+                        <option value="@item.EditionId">@item.Edition.Title</option>
+                    }
+                </select>
+            </div>
+        }
+        @if (GetSelectedPrice() != null)
+        {
+            <h5>$@GetSelectedPrice().Price</h5>
+        }
+        <hr />
+        <button @onclick="AddCart" class="btn btn-outline-success">Add Cart</button>
+    </DescriptionsItem>
+</Descriptions>
+
