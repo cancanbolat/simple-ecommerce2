@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31025.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31512.422
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3754B119-31E4-4761-909D-C50A4CFF101F}"
 EndProject
@@ -38,6 +38,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{CA5CF2F0-44CB-42B9-B837-5139C76AD674}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Commerce.AuthServer", "src\Services\IdentityService\E-Commerce.AuthServer\E-Commerce.AuthServer.csproj", "{3F01A4E5-C140-4F06-BA2A-A21518FCAE95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6B9F24CE-B001-45A3-823D-F49EC5745949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Commerce.Tests", "src\Tests\E-Commerce.Tests\E-Commerce.Tests.csproj", "{529362A4-E2F9-4F19-A7F1-8F369478A18D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,10 @@ Global
 		{3F01A4E5-C140-4F06-BA2A-A21518FCAE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F01A4E5-C140-4F06-BA2A-A21518FCAE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F01A4E5-C140-4F06-BA2A-A21518FCAE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529362A4-E2F9-4F19-A7F1-8F369478A18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529362A4-E2F9-4F19-A7F1-8F369478A18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529362A4-E2F9-4F19-A7F1-8F369478A18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529362A4-E2F9-4F19-A7F1-8F369478A18D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +107,8 @@ Global
 		{DBC12665-B0AA-4DAA-95AA-B61D6D529069} = {56C7BCBB-A8C2-4574-BD85-FA8185BADD8F}
 		{CA5CF2F0-44CB-42B9-B837-5139C76AD674} = {E1FF5F33-2D18-4870-A747-C7B51A8CC063}
 		{3F01A4E5-C140-4F06-BA2A-A21518FCAE95} = {DBC12665-B0AA-4DAA-95AA-B61D6D529069}
+		{6B9F24CE-B001-45A3-823D-F49EC5745949} = {F3BBC9D0-0C2E-42E8-BF67-02EB2FF72EF5}
+		{529362A4-E2F9-4F19-A7F1-8F369478A18D} = {6B9F24CE-B001-45A3-823D-F49EC5745949}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D6E4EB5-4B0A-4C91-9402-D3EC2738AD91}
